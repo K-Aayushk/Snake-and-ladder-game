@@ -28,10 +28,14 @@ def dice(player_position,snakes):
             print("Your have landed on snake:((")
             print("Your position is now zero!!!")
             player_position=0
+        if(player_position==100):
+            print("You have won the game!!!")
+            return
         dice(player_position,snakes)
     elif(inp.lower()=="n"):
         print("Game has been terminated!!!")
     else:
         print("please enter a correct value!!!")
         dice(player_position,snakes)
+
 dice(player_position,snakes)
